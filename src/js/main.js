@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.initBurgerMenu();
   }
 
+  if (typeof window.initInfoSlider === "function") {
+    window.initInfoSlider();
+  }
+
   if (!header) {
     return;
   }
