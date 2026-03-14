@@ -1,0 +1,34 @@
+.company {
+  padding: 70px 0;
+  background-color: var(--bg-prymary-color);
+}
+.company__title {
+  color: var(--black-text);
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 115%;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.company__title-text {
+  color: var(--gray-text);
+}
+.company__list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.company__list:last-child {
+  margin-bottom: 0;
+}
+.company__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 145px;
+  height: 56px;
+  border-radius: 20px;
+  border: 1px solid #e5e5e5;
+}
