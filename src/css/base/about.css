@@ -1,0 +1,157 @@
+.about {
+  padding: 70px 0 82px;
+  background-color: var(--bg-prymary-color);
+}
+
+.about__title {
+  color: var(--black-text);
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.about__title-text {
+  display: inline;
+  color: var(--gray-text);
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: minmax(280px, 355px) minmax(0, 1fr);
+  align-items: center;
+  gap: 125px;
+}
+
+.about__left {
+  width: 100%;
+}
+
+.about__left img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.about__right {
+  min-width: 0;
+}
+
+.about__right-text {
+  color: var(--black-text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 600;
+  line-height: 1.15;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.about__list-item {
+  border-radius: 999px;
+  padding: 20px 24px;
+  background-color: var(--prymary-text);
+}
+
+.about__list-item:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 58px 0 68px;
+  }
+
+  .about__title {
+    margin-bottom: 40px;
+  }
+
+  .about__container {
+    gap: 24px;
+  }
+
+  .about__right-text {
+    font-size: 14px;
+  }
+
+  .about__list-item {
+    padding: 18px 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 56px 0 62px;
+  }
+
+  .about__title {
+    margin-bottom: 40px;
+    font-size: 36px;
+  }
+
+  .about__container {
+    display: block;
+  }
+
+  .about__left {
+    display: none;
+  }
+
+  .about__right-text {
+    margin-bottom: 22px;
+    font-size: 14px;
+  }
+
+  .about__list {
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .about__list-item {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 430px) {
+  .about {
+    padding: 52px 0 56px;
+  }
+
+  .about__title {
+    margin-bottom: 34px;
+    font-size: 26px;
+    letter-spacing: -1px;
+  }
+
+  .about__right-text {
+    margin-bottom: 18px;
+    font-size: 13px;
+  }
+
+  .about__list {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .about__list-item {
+    min-height: 58px;
+    padding: 0 18px;
+  }
+}
