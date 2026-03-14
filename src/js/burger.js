@@ -2,8 +2,9 @@
   function initBurgerMenu() {
     const header = document.querySelector(".header");
     const burgerButton = document.querySelector(".header__burger");
+    const headerMenu = header?.querySelector(".header__menu");
 
-    if (!header || !burgerButton) {
+    if (!header || !burgerButton || !headerMenu) {
       return;
     }
 
@@ -21,6 +22,14 @@
 
     document.addEventListener("click", (event) => {
       if (!header.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    headerMenu.addEventListener("click", (event) => {
+      const menuAction = event.target.closest(".header__menu-link, .header__menu-button, a, button");
+
+      if (menuAction) {
         closeMenu();
       }
     });
