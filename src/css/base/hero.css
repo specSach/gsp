@@ -44,7 +44,8 @@
   left: -70px;
   width: clamp(560px, 72vw, 680px);
   height: clamp(270px, 34vw, 320px);
-  background: url("../../../media/main/hero-bg-text.svg") no-repeat 0 0 / 100% 100%;
+  background: url("../../../media/main/hero-bg-text.svg") no-repeat 0 0 / 100%
+    100%;
   z-index: -1;
   pointer-events: none;
 }
@@ -126,20 +127,20 @@
   .hero__title {
     width: min(600px, 100%);
     max-width: 100%;
-    margin-bottom: 12px;
     padding: 26px 26px 22px;
     background: var(--prymary-text);
-    border-radius: 20px;
+    border-radius: 20px 20px 20px 0;
     font-size: 42px;
     letter-spacing: -1px;
+    margin: 0;
   }
 
   .hero__data {
     width: min(260px, 100%);
     margin-bottom: 0;
-    padding: 12px 18px 14px;
+    padding: 30px 18px 14px;
     background: var(--prymary-text);
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
     font-size: 15px;
   }
 
@@ -196,10 +197,10 @@
 
   .hero__title {
     max-width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     padding: 18px 16px 16px;
     background: var(--prymary-text);
-    border-radius: 20px;
+    border-radius: 20px 20px 20px 0;
     font-size: clamp(22px, 9vw, 34px);
     line-height: 1.05;
     letter-spacing: -0.5px;
@@ -209,10 +210,10 @@
   .hero__data {
     width: auto;
     max-width: 240px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     padding: 10px 14px 12px;
     background: var(--prymary-text);
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
     font-size: 13px;
     line-height: 1.25;
     text-align: left;
