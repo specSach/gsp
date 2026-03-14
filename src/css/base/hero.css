@@ -155,9 +155,9 @@
 
 @media (max-width: 768px) {
   .hero {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    width: auto;
+    margin-left: -20px;
+    margin-right: -20px;
     padding: 6px 0 30px;
     margin-bottom: 22px;
   }
