@@ -46,7 +46,7 @@
 
 .program__item-descr {
   color: var(--black-text);
-  font-size: clamp(18px, 2vw, 20px);
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -85,7 +85,7 @@
 .program__item-name {
   margin-bottom: 6px;
   color: var(--black-text);
-  font-size: 22px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.1;
 }
