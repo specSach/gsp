@@ -1,6 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Golos Text", sans-serif;
   background-color: #f5f5f5;
+}
+
+#program,
+#contact {
+  scroll-margin-top: 100px;
 }
 
 .wrapper {
@@ -21,4 +30,11 @@ body {
 
 .circle__gif {
   mix-blend-mode: lighten;
+}
+
+@media (max-width: 768px) {
+  #program,
+  #contact {
+    scroll-margin-top: 78px;
+  }
 }

@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.initInfoSlider();
   }
 
+  if (typeof window.initFaqAccordion === "function") {
+    window.initFaqAccordion();
+  }
+
   if (!header) {
     return;
   }

@@ -8,6 +8,7 @@
   <link href="./src/css/style.css" rel="stylesheet">
   <script defer src="./src/js/slider.js"></script>
   <script defer src="./src/js/burger.js"></script>
+  <script defer src="./src/js/faq.js"></script>
   <script defer src="./src/js/main.js"></script>
 </head>
 
@@ -26,8 +27,8 @@
       </button>
 
       <nav class="header__menu" aria-label="Основная навигация">
-        <a href="#" class="header__menu-link">Программа</a>
-        <a href="#" class="header__menu-button button__prymary">Зарегистрироваться</a>
+        <a href="#program" class="header__menu-link">Программа</a>
+        <a href="#contact" class="header__menu-button button__prymary">Зарегистрироваться</a>
       </nav>
     </div>
   </header>
@@ -50,7 +51,7 @@
           </div>
         </div>
         <div class="hero__button">
-          <a class="hero__button-link button__prymary" href="#">Зарегистрироваться</a>
+          <a class="hero__button-link button__prymary" href="#contact">Зарегистрироваться</a>
           <a class="hero__button-link button__prymary" href="#">Добавить в календарь</a>
         </div>
       </div>
@@ -159,7 +160,7 @@
 
 
   <!-- PROGRAM -->
-  <section class="program">
+  <section class="program" id="program">
     <div class="wrapper">
       <h2 class="program__title">Программа <span class="program__title-text">мероприятия:</span></h2>
       <div class="program__item">
@@ -312,7 +313,7 @@
 
 
   <!-- FEEDBACK -->
-  <section class="feedback">
+  <section class="feedback" id="contact">
     <div class="wrapper">
       <div class="feedback__container">
         <div class="feedback__left">
@@ -385,43 +386,63 @@
         Часто задаваемые <span>вопросы</span>
       </h2>
       <div class="faq__container">
-        <div class="faq__item">
-          <div class="faq__item-title">
-            Будет ли запись докладов?
-          </div>
-          <div class="faq__item-descr">
-            Да, мы пришлем ссылку в email-рассылке после мероприятия
-          </div>
-        </div>
-        <div class="faq__item">
-          <div class="faq__item-title">
-            Будет ли еда
-            и напитки во время конференции?
-          </div>
-          <div class="faq__item-descr">
-            Гостей ждет фуршет во время нетворкинга.
+        <div class="faq__item faq__item--open">
+          <button class="faq__item-trigger" type="button" aria-expanded="true">
+            <span class="faq__item-title">
+              Будет ли запись докладов?
+            </span>
+            <span class="faq__item-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq__item-content">
+            <div class="faq__item-descr">
+              Да, мы пришлем ссылку в email-рассылке после мероприятия
+            </div>
           </div>
         </div>
         <div class="faq__item">
-          <div class="faq__item-title">
-            Есть ли парковка на территории?
+          <button class="faq__item-trigger" type="button" aria-expanded="false">
+            <span class="faq__item-title">
+              Будет ли еда
+              и напитки во время конференции?
+            </span>
+            <span class="faq__item-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq__item-content">
+            <div class="faq__item-descr">
+              Гостей ждет фуршет во время нетворкинга.
+            </div>
           </div>
-          <div class="faq__item-descr">
-            Нет, но рядом с местом проведения есть городские парковки.
-            Для вашего удобства рекомендуем добираться на такси или общественном транспорте.
+        </div>
+        <div class="faq__item">
+          <button class="faq__item-trigger" type="button" aria-expanded="false">
+            <span class="faq__item-title">
+              Есть ли парковка на территории?
+            </span>
+            <span class="faq__item-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq__item-content">
+            <div class="faq__item-descr">
+              Нет, но рядом с местом проведения есть городские парковки.
+              Для вашего удобства рекомендуем добираться на такси или общественном транспорте.
+            </div>
           </div>
         </div>
         <div class="faq__item faq__item--wide">
-          <div class="faq__item-title">
-            Зачем регистрироваться?
-          </div>
-          <div class="faq__item-descr">
-            Количество мест ограничено. Мероприятие носит закрытый характер и ориентировано на руководителей бизнеса,
-            директоров по информационным технологиям и цифровой трансформации, отвечающих за стратегическое развитие и
-            повышение эффективности бизнеса.
-          </div>
-          <div class="faq__item-descr">
-            Формат предполагает содержательную деловую часть, и неформальное общение.
+          <button class="faq__item-trigger" type="button" aria-expanded="false">
+            <span class="faq__item-title">
+              Зачем регистрироваться?
+            </span>
+            <span class="faq__item-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq__item-content">
+            <div class="faq__item-descr">
+              Количество мест ограничено. Мероприятие носит закрытый характер и ориентировано на руководителей
+              бизнеса, директоров по информационным технологиям и цифровой трансформации, отвечающих за стратегическое
+              развитие и повышение эффективности бизнеса.
+            </div>
+            <div class="faq__item-descr">
+              Формат предполагает содержательную деловую часть, и неформальное общение.
+            </div>
           </div>
         </div>
       </div>
