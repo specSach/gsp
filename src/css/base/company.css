@@ -96,35 +96,64 @@
     display: grid;
     grid-template-rows: auto auto;
     row-gap: 12px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    position: relative;
+    overflow: hidden;
     padding: 2px 16px 10px;
-    scrollbar-width: none;
   }
 
-  .company__slider::-webkit-scrollbar {
-    display: none;
+  .company__slider::before,
+  .company__slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .company__slider::before {
+    left: 0;
+    background: linear-gradient(
+      90deg,
+      var(--bg-prymary-color) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .company__slider::after {
+    right: 0;
+    background: linear-gradient(
+      270deg,
+      var(--bg-prymary-color) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 
   .company__list {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 132px;
-    justify-content: initial;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     gap: 12px;
     width: max-content;
     margin-bottom: 0;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    touch-action: pan-y;
+    cursor: grab;
+    user-select: none;
+  }
+
+  .company__list.is-dragging {
+    cursor: grabbing;
   }
 
   .company__item {
-    width: auto;
-    min-width: 0;
+    width: 132px;
+    min-width: 132px;
     height: 54px;
     padding: 0;
     border-radius: 16px;
-    scroll-snap-align: start;
   }
 
   .company__item img {
@@ -149,12 +178,14 @@
     padding: 2px 14px 10px;
   }
 
-  .company__list {
-    grid-auto-columns: 122px;
-    gap: 10px;
+  .company__slider::before,
+  .company__slider::after {
+    width: 14px;
   }
 
   .company__item {
+    width: 122px;
+    min-width: 122px;
     height: 50px;
     border-radius: 14px;
   }

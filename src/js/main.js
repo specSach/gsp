@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.initFaqAccordion();
   }
 
+  if (typeof window.initCompanyMarquee === "function") {
+    window.initCompanyMarquee();
+  }
+
   if (!header) {
     return;
   }
