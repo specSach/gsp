@@ -1,6 +1,7 @@
 .company {
   padding: 70px 0;
   background-color: var(--bg-prymary-color);
+  overflow: hidden;
 }
 
 .company__title {
@@ -52,6 +53,31 @@
   width: auto;
   max-width: 100%;
   height: auto;
+}
+
+@media (max-width: 1285px) and (min-width: 769px) {
+  .company__slider {
+    overflow: visible;
+    padding: 0 20px;
+  }
+
+  .company__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .company__item {
+    width: 132px;
+    height: 54px;
+    padding: 0 10px;
+    border-radius: 16px;
+  }
+
+  .company__item img {
+    max-width: 88%;
+  }
 }
 
 @media (max-width: 768px) {

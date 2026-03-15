@@ -30,16 +30,15 @@
   z-index: 1;
 }
 .feedback__container {
-  min-height: 560px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
+  gap: 20px;
 }
 .feedback__left {
   display: flex;
   flex-direction: column;
   width: 396px;
-  min-height: 560px;
 }
 .feedback__info {
   position: relative;
@@ -113,19 +112,20 @@
 .feedback__right {
   position: relative;
   width: 488px;
-  min-height: 560px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .feedback__right::before {
   content: "";
   position: absolute;
-  inset: -105px -190px -120px -205px;
+  inset: 0;
   background: url("../../../media/main/contact-bg.svg") no-repeat center / 100%
     auto;
+  transform: scale(1.34) translateY(-2%);
+  transform-origin: center;
   z-index: 1;
   pointer-events: none;
 }
@@ -247,6 +247,30 @@
   opacity: 0.92;
 }
 
+@media (max-width: 1285px) {
+  .feedback {
+    padding: 68px 0;
+  }
+
+  .feedback__container {
+    min-height: 0;
+    gap: 18px;
+  }
+
+  .feedback__left {
+    min-height: 0;
+  }
+
+  .feedback__right {
+    min-height: 0;
+  }
+
+  .feedback__right::before {
+    inset: 0;
+    transform: scale(1.22) translateY(-1%);
+  }
+}
+
 @media (max-width: 1024px) {
   .feedback__container {
     min-height: 0;
@@ -278,8 +302,48 @@
   }
 
   .feedback__right::before {
-    inset: -70px -110px;
-    background-size: 120% auto;
+    inset: 0;
+    transform: scale(1.14);
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback {
+    padding: 56px 0;
+  }
+
+  .feedback__container {
+    gap: 22px;
+    align-items: center;
+  }
+
+  .feedback__left {
+    width: 100%;
+    display: block;
+  }
+
+  .feedback__info {
+    width: 100%;
+    max-width: 396px;
+    margin: 0 auto;
+  }
+
+  .feedback__contact {
+    display: none;
+  }
+
+  .feedback__right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .feedback__right::before {
+    display: none;
+  }
+
+  .feedback__form {
+    width: min(100%, 396px);
+    margin: 0 auto;
   }
 }
 
@@ -300,8 +364,4 @@
     width: 100%;
   }
 
-  .feedback__right::before {
-    inset: -22px;
-    background-size: 145% auto;
-  }
 }
