@@ -18,6 +18,10 @@
   color: var(--gray-text);
 }
 
+.about__title-text-glue {
+  white-space: normal;
+}
+
 .about__container {
   display: grid;
   grid-template-columns: minmax(280px, 355px) minmax(0, 1fr);
@@ -100,6 +104,14 @@
   .about__title {
     margin-bottom: 40px;
     font-size: 36px;
+  }
+
+  .about__title-text {
+    display: block;
+  }
+
+  .about__title-text-glue {
+    white-space: nowrap;
   }
 
   .about__container {

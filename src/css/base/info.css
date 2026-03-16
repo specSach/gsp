@@ -175,20 +175,24 @@
   .info__slider {
     overflow: hidden;
     touch-action: pan-y;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     border-radius: 22px;
+    transition: height 0.35s ease;
   }
 
   .info__container {
     display: flex;
     gap: 0;
+    align-items: flex-start;
     transition: transform 0.35s ease;
     will-change: transform;
   }
 
   .info__item {
     flex: 0 0 100%;
-    min-height: 281px;
+    min-height: 0;
+    height: auto;
+    align-self: flex-start;
     padding: 28px 20px 18px;
     border-radius: 22px;
   }
@@ -214,7 +218,7 @@
 
   .info__item--wide {
     grid-column: auto;
-    min-height: 305px;
+    min-height: 0;
     margin-bottom: 0;
   }
 
@@ -227,7 +231,7 @@
   }
 
   .info__item-block {
-    margin-top: 0;
+    margin-top: 2px;
     padding: 22px 20px;
     border-radius: 22px;
     font-size: 14px;
@@ -273,7 +277,7 @@
   }
 
   .info__item {
-    min-height: 281px;
+    min-height: 0;
     padding: 24px 18px 16px;
   }
 

@@ -1,10 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header");
 
-  if (typeof window.initBurgerMenu === "function") {
-    window.initBurgerMenu();
-  }
-
   if (typeof window.initInfoSlider === "function") {
     window.initInfoSlider();
   }

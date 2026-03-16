@@ -45,41 +45,6 @@ body {
   line-height: 120%;
 }
 
-.header__burger {
-  display: none;
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: #ffffff;
-  border: 1px solid rgba(38, 38, 38, 0.14);
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  flex-direction: column;
-}
-
-.header__burger span {
-  display: block;
-  width: 18px;
-  height: 2px;
-  background: var(--black-text);
-  transition:
-    transform 0.25s ease,
-    opacity 0.25s ease;
-}
-
-.header.header--menu-open .header__burger span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
-}
-
-.header.header--menu-open .header__burger span:nth-child(2) {
-  opacity: 0;
-}
-
-.header.header--menu-open .header__burger span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
-}
-
 @media (max-width: 768px) {
   .header {
     padding: 14px 0;
@@ -94,45 +59,54 @@ body {
     height: auto;
   }
 
-  .header__burger {
-    display: inline-flex;
-  }
-
   .header__menu {
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 0;
-    left: 0;
-    margin: 0 20px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 18px;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.98);
-    border: 1px solid rgba(38, 38, 38, 0.08);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateY(-8px);
-    transition:
-      opacity 0.2s ease,
-      transform 0.2s ease,
-      visibility 0.2s ease;
+    justify-content: flex-end;
+    gap: 0;
   }
 
-  .header.header--menu-open .header__menu {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateY(0);
+  .header__menu-link {
+    display: none;
   }
 
-  .header__menu-link,
-  .header__menu-button {
-    width: 100%;
+  .header__menu-button.button__prymary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 12px 20px;
+    font-size: 11px;
+    line-height: 1;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .header {
+    padding: 12px 0;
+  }
+
+  body {
+    padding-top: 62px;
+  }
+
+  .header__logo img {
+    width: 145px;
+  }
+
+  .header__menu-button.button__prymary {
+    min-height: 38px;
+    padding: 10px 16px;
     text-align: center;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header__menu-button.button__prymary {
+    min-height: 36px;
+    padding: 9px 14px;
+    font-size: 9px;
   }
 }
