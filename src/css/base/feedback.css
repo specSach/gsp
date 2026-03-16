@@ -358,11 +358,30 @@
 
   .feedback__right {
     width: 100%;
+    max-width: 560px;
+    min-height: 0;
     justify-content: center;
+    overflow: visible;
+    padding: 26px 0 22px;
+    z-index: 0;
   }
 
   .feedback__right::before {
-    display: none;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: min(160%, 680px);
+    height: calc(100% + 180px);
+    transform: translate(-50%, -50%);
+    background-image: url("../../../media/main/contact-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 124% auto;
+    opacity: 0.98;
+    z-index: 1;
+    pointer-events: none;
   }
 
   .feedback__form {
@@ -417,6 +436,12 @@
 
   .feedback__form {
     padding: 18px 14px 22px;
+  }
+
+  .feedback__right::before {
+    width: min(180%, 640px);
+    height: calc(100% + 150px);
+    background-size: 132% auto;
   }
 
   .feedback__field,
